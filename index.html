@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="my">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့</title>
+    <meta
+      name="description"
+      content="ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့ — ရှမ်းပြည်ရိုးရာဂိမ်းများအကြောင်း လေ့လာဖတ်ရှုနိုင်ပြီး 3x3 puzzle ဂိမ်းနဲ့ဖျော်ဖြေရေးအတွက် ဖန်တီးထားတဲ့အက်ပ်။"
+    />
+    <meta
+      name="keywords"
+      content="ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့, ရိုးရာဂိမ်း, Shan Koe Mee, puzzle game, educational app"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့" />
+    <meta
+      property="og:description"
+      content="ရှမ်းပြည်ရိုးရာဂိမ်း ၄ မျိုး (Kwee, Shan Koe Mee, Phin Phit, Slot) အကြောင်းကို လေ့လာဖတ်ရှုရင်း 3x3 puzzle ဂိမ်းနဲ့ စိတ်ပျော်စရာ ဖျော်ဖြေရေးအတွက် ဖန်တီးထားတဲ့ အက်ပ်။"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/hero.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" type="image/png" href="assets/images/hero.png" />
+    <link rel="apple-touch-icon" href="assets/images/hero.png" />
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = '2.0';
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        'script',
+        'https://connect.facebook.net/en_US/fbevents.js'
+      );
+      fbq('init', '1973693933554281');
+      fbq('track', 'PageView');
+    </script>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1973693933554281&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Android",
+        "url": "https://play.google.com/store/apps/details?id=com.ksns.app",
+        "inLanguage": "my",
+        "keywords": [
+          "ကျွဲ",
+          "ရှမ်းကိုးမီး",
+          "ငါးပစ်",
+          "စလော့",
+          "Shan Koe Mee",
+          "puzzle game"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "Kyat"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 class="sr-only">
+      ကျွဲ ရှမ်းကိုးမီး ငါးပစ် စလော့ – ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့
+      ရိုးရာဂိမ်းသင်ခန်းစာ နှင့် puzzle ဂိမ်း
+    </h1>
+    <!-- TOP NAV -->
+    <nav class="top-nav">
+      <img
+        src="assets/images/logo.png"
+        alt="ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့"
+        class="nav-logo"
+      />
+      <div class="nav-pay-brands">
+        <img
+          src="assets/images/wave.png"
+          alt="Wave Money"
+          class="nav-pay-logo"
+        />
+        <img src="assets/images/kbz.png" alt="KBZ Pay" class="nav-pay-logo" />
+      </div>
+    </nav>
+
+    <!-- JACKPOT HERO -->
+    <section class="hero">
+      <div class="jackpot-box">
+        <div class="jackpot-marquee"></div>
+        <h1 class="jackpot-title">JACKPOT</h1>
+        <div class="jackpot-counter-wrap">
+          <div class="jackpot-counter" id="jackpot-display">120,016,888</div>
+        </div>
+      </div>
+      <div class="hero-mascot-wrap">
+        <img
+          src="assets/images/hero.png"
+          alt="ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့"
+          class="hero-mascot"
+          width="400"
+          height="400"
+        />
+      </div>
+    </section>
+
+    <!-- GAME CAROUSEL -->
+    <section class="games-carousel">
+      <div class="carousel-track">
+        <div class="game-thumb">
+          <span class="badge hot">HOT!</span>
+          <div class="thumb-img gi-1"></div>
+          <div class="thumb-label">GATES OF<br />OLYMPUS</div>
+        </div>
+        <div class="game-thumb">
+          <span class="badge hot">HOT!</span>
+          <div class="thumb-img gi-2"></div>
+          <div class="thumb-label">AFRICAN<br />BUFFALO</div>
+        </div>
+        <div class="game-thumb">
+          <span class="badge hot">HOT!</span>
+          <div class="thumb-img gi-3"></div>
+          <div class="thumb-label">STARLIGHT<br />PRINCESS</div>
+        </div>
+        <div class="game-thumb">
+          <span class="badge hot">HOT!</span>
+          <div class="thumb-img gi-4"></div>
+          <div class="thumb-label">SUPER<br />ACE</div>
+        </div>
+        <div class="game-thumb">
+          <span class="badge hot">HOT!</span>
+          <div class="thumb-img gi-5"></div>
+          <div class="thumb-label">CHARGE<br />BUFFALO</div>
+        </div>
+        <div class="game-thumb">
+          <span class="badge new">NEW</span>
+          <div class="thumb-img gi-6"></div>
+          <div class="thumb-label">FORTUNE<br />GEMS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOLDEN RIBBON -->
+    <div class="golden-ribbon">
+      <p>
+        ဂိမ်းများဆော့ကစားပြီး အနိုင်ရယူရန်နှင့် ပိုက်ဆံထုတ်ယူရန်အတွက်
+        ဒေါင်းလုဒ်လုပ်လိုက်ပါ။
+      </p>
+    </div>
+
+    <!-- DOWNLOAD CTA (Play Store) -->
+    <div class="cta-wrap">
+      <a
+        href="https://play.google.com/store/apps/details?id=com.ksns.app"
+        class="btn-dl"
+        id="download"
+        onclick="trackDL()"
+        target="_blank"
+        rel="noopener"
+      >
+        ဒေါင်းလုဒ်လုပ်ရန်
+      </a>
+    </div>
+
+    <!-- PROMO DIVIDER -->
+    <div class="promo-divider">
+      <span class="divider-line"></span>
+      <span class="divider-text">နောက်ဆုံးထွက်ထားသော ပရိုမိုးရှင်းများ</span>
+      <span class="divider-line"></span>
+    </div>
+
+    <!-- WIN SHOWCASE -->
+    <div class="win-showcase">
+      <div class="win-card super-win">
+        <div class="win-float-icon">
+          <div class="thumb-img gi-3"></div>
+        </div>
+        <div class="win-body">
+          <div class="win-heading">SUPER<br />WIN</div>
+          <div class="win-num">3,242,869</div>
+        </div>
+      </div>
+
+      <div class="win-card jackpot-win">
+        <div class="win-float-icon">
+          <div class="thumb-img gi-1"></div>
+        </div>
+        <div class="win-body">
+          <div class="win-heading">JACKPOT<br />PARTY</div>
+          <div class="win-num">134,676,953</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER DESC -->
+    <p class="page-footer-text">
+      Google Play Store မှ အင်စတောလ်လုပ်နိုင်သောအက်ပ် (com.ksns.app)
+    </p>
+
+    <div class="spacer"></div>
+
+    <!-- STICKY BOTTOM BAR -->
+    <div class="sticky-bar">
+      <div class="bar-left">
+        <img
+          src="assets/images/hero.png"
+          alt="ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့"
+          class="bar-app-icon"
+        />
+        <div class="bar-meta">
+          <strong class="bar-app-name">ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့</strong>
+          <span class="bar-dl-count">Download:1,569,000+</span>
+        </div>
+      </div>
+      <a
+        href="https://play.google.com/store/apps/details?id=com.ksns.app"
+        class="bar-dl-btn"
+        onclick="trackDL()"
+        target="_blank"
+        rel="noopener"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          width="22"
+          height="22"
+          fill="none"
+          stroke="#fff"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+      </a>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
