@@ -70,7 +70,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Noto+Sans+Myanmar:wght@700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
@@ -121,23 +121,35 @@
       </div>
     </nav>
 
-    <!-- JACKPOT HERO -->
+    <!-- HERO (PRX7 art + download, then promos) -->
     <section class="hero">
-      <div class="jackpot-box">
-        <div class="jackpot-marquee"></div>
-        <h1 class="jackpot-title">JACKPOT</h1>
-        <div class="jackpot-counter-wrap">
-          <div class="jackpot-counter" id="jackpot-display">120,016,888</div>
-        </div>
-      </div>
-      <div class="hero-mascot-wrap">
+      <div class="hero-mascot-wrap hero-mascot-wrap--prx7">
         <img
           src="assets/images/hero.png"
-          alt="ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့"
+          alt="PRX7 ကျွဲ-ရှမ်းကိုးမီး-ငါးပစ်-စလော့"
           class="hero-mascot"
           width="400"
           height="400"
         />
+      </div>
+      <div class="cta-wrap cta-wrap--hero">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.ksns.app"
+          class="btn-dl btn-dl--gold"
+          id="download"
+          onclick="return trackDL()"
+          target="_blank"
+          rel="noopener"
+        >
+          ဒေါင်းလုဒ်လုပ်ရန်
+        </a>
+      </div>
+      <div class="jackpot-box">
+        <div class="jackpot-marquee"></div>
+        <div class="jackpot-bonuses">
+          <div class="bonus-pill">မန်ဘာသစ် ဘောနပ် 200%</div>
+          <div class="bonus-pill">မိတ်ဆက်ဘောနပ် 5000</div>
+        </div>
       </div>
     </section>
 
@@ -183,20 +195,6 @@
         ဂိမ်းများဆော့ကစားပြီး အနိုင်ရယူရန်နှင့် ပိုက်ဆံထုတ်ယူရန်အတွက်
         ဒေါင်းလုဒ်လုပ်လိုက်ပါ။
       </p>
-    </div>
-
-    <!-- DOWNLOAD CTA (Play Store) -->
-    <div class="cta-wrap">
-      <a
-        href="https://play.google.com/store/apps/details?id=com.ksns.app"
-        class="btn-dl"
-        id="download"
-        onclick="return trackDL()"
-        target="_blank"
-        rel="noopener"
-      >
-        ဒေါင်းလုဒ်လုပ်ရန်
-      </a>
     </div>
 
     <!-- PROMO DIVIDER -->

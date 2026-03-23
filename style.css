@@ -50,6 +50,7 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   padding: 12px 16px 8px;
   position: relative;
   z-index: 10;
@@ -67,6 +68,7 @@ body::before {
 }
 
 .nav-pay-brands {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -91,7 +93,7 @@ body::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 8px 16px 0;
+  padding: 6px 16px 0;
 }
 
 .jackpot-box {
@@ -99,7 +101,7 @@ body::before {
   width: 100%;
   max-width: 360px;
   text-align: center;
-  padding: 28px 20px 18px;
+  padding: 22px 18px 18px;
   background:
     radial-gradient(ellipse at 50% 20%, rgba(100,50,200,0.25) 0%, transparent 65%),
     radial-gradient(ellipse at 50% 90%, rgba(218,165,32,0.15) 0%, transparent 55%),
@@ -139,53 +141,47 @@ body::before {
   50% { opacity: 0.3; }
 }
 
-.jackpot-title {
-  font-size: 3rem;
-  font-weight: 900;
-  letter-spacing: 6px;
-  line-height: 1;
-  margin-bottom: 14px;
-  background: linear-gradient(180deg, #fffde0 0%, #ffd700 25%, #daa520 55%, #b8860b 85%, #8b6914 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  filter: drop-shadow(0 0 18px rgba(255,215,0,0.55)) drop-shadow(0 3px 6px rgba(0,0,0,0.6));
-}
-
-.jackpot-counter-wrap {
+.jackpot-bonuses {
+  position: relative;
+  z-index: 2;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  width: 100%;
 }
 
-.jackpot-counter {
-  display: inline-block;
-  background: linear-gradient(180deg, #1c6b1c 0%, #0e4a0e 100%);
-  border: 2px solid var(--gold);
-  border-radius: 12px;
-  padding: 8px 28px;
-  font-size: 1.7rem;
-  font-weight: 900;
-  color: var(--gold-light);
-  letter-spacing: 2px;
-  text-shadow: 0 0 12px rgba(255,215,0,0.7);
-  box-shadow:
-    inset 0 2px 8px rgba(0,0,0,0.5),
-    0 4px 20px rgba(0,0,0,0.4),
-    0 0 15px rgba(255,215,0,0.15);
-}
-
-/* ═══ HERO MASCOT ═══ */
+/* ═══ HERO MASCOT (PRX7 logo art) ═══ */
 .hero-mascot-wrap {
-  width: 220px;
-  margin-top: 6px;
+  width: min(200px, 52vw);
+  max-height: min(36vh, 220px);
+  margin-top: 4px;
   margin-bottom: 4px;
   position: relative;
   z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-mascot-wrap--prx7 {
+  width: min(280px, 78vw);
+  max-height: min(48vh, 320px);
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+.hero-mascot-wrap--prx7 .hero-mascot {
+  max-height: min(48vh, 320px);
 }
 
 .hero-mascot {
   width: 100%;
+  max-width: 100%;
+  max-height: min(36vh, 220px);
   height: auto;
+  object-fit: contain;
   display: block;
   filter: drop-shadow(0 8px 30px rgba(0,0,0,0.6));
   animation: float 4s ease-in-out infinite, heroBreath 5s ease-in-out infinite;
@@ -199,6 +195,28 @@ body::before {
 @keyframes heroBreath {
   0%,100% { transform: scale(1); }
   50%     { transform: scale(1.03); }
+}
+
+/* ═══ BONUS BUTTONS (same look as former jackpot counter) ═══ */
+.bonus-pill {
+  width: 100%;
+  display: block;
+  font-family: 'Noto Sans Myanmar', 'Myanmar Text', sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  text-align: center;
+  padding: 10px 22px;
+  border-radius: 12px;
+  border: 2px solid var(--gold);
+  background: linear-gradient(180deg, #1c6b1c 0%, #0e4a0e 100%);
+  color: var(--gold-light);
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 12px rgba(255, 215, 0, 0.7);
+  box-shadow:
+    inset 0 2px 8px rgba(0, 0, 0, 0.5),
+    0 4px 20px rgba(0, 0, 0, 0.4),
+    0 0 15px rgba(255, 215, 0, 0.15);
 }
 
 /* ═══ GAME CAROUSEL ═══ */
@@ -322,6 +340,23 @@ body::before {
   padding: 18px 16px 22px;
 }
 
+.cta-wrap--hero {
+  padding: 10px 16px 12px;
+  width: 100%;
+  max-width: 420px;
+  flex-shrink: 0;
+}
+
+.cta-wrap--hero .btn-dl {
+  display: block;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 14px 28px;
+  font-size: 1.05rem;
+  font-family: 'Noto Sans Myanmar', 'Inter', system-ui, sans-serif;
+}
+
 .btn-dl {
   display: inline-block;
   padding: 16px 52px;
@@ -367,6 +402,48 @@ body::before {
     0 4px 14px rgba(37,99,235,0.3),
     inset 0 1px 0 rgba(255,255,255,0.2);
   animation: none;
+}
+
+/* Gold primary CTA (under PRX7 hero) */
+.btn-dl.btn-dl--gold {
+  background: linear-gradient(120deg, #fff4b0 0%, #ffe566 12%, #ffd700 35%, #daa520 58%, #ffd700 82%, #fff8d0 100%);
+  background-size: 220% 220%;
+  color: #3d2608;
+  box-shadow:
+    0 5px 0 #8b6914,
+    0 10px 28px rgba(184, 134, 11, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.45);
+  animation:
+    btn-pulse-gold 2.2s ease-in-out infinite,
+    btn-gradient-move 3s linear infinite,
+    btn-wiggle 4.5s ease-in-out infinite;
+}
+
+.btn-dl.btn-dl--gold::before {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+}
+
+.btn-dl.btn-dl--gold:active {
+  box-shadow:
+    0 2px 0 #8b6914,
+    0 4px 14px rgba(139, 105, 20, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+@keyframes btn-pulse-gold {
+  0%, 100% {
+    box-shadow:
+      0 5px 0 #8b6914,
+      0 10px 28px rgba(184, 134, 11, 0.5),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow:
+      0 5px 0 #8b6914,
+      0 16px 44px rgba(255, 200, 50, 0.55),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
 }
 
 @keyframes btn-pulse {
@@ -649,37 +726,50 @@ body::before {
 
 /* ═══ RESPONSIVE ═══ */
 @media (min-width: 420px) {
-  .jackpot-title { font-size: 3.4rem; }
-  .jackpot-counter { font-size: 2rem; padding: 10px 34px; }
   .jackpot-box { max-width: 400px; }
-  .hero-mascot-wrap { width: 250px; }
+  .hero-mascot-wrap--prx7 {
+    width: min(300px, 78vw);
+    max-height: min(50vh, 340px);
+  }
+  .hero-mascot-wrap--prx7 .hero-mascot { max-height: min(50vh, 340px); }
+  .cta-wrap--hero .btn-dl { padding: 14px 32px; font-size: 1.08rem; }
   .game-thumb { width: 118px; }
   .carousel-track { gap: 12px; }
   .win-showcase { max-width: 440px; }
+  .bonus-pill { font-size: 1.15rem; padding: 10px 28px; }
 }
 
 @media (min-width: 640px) {
-  .jackpot-title { font-size: 3.8rem; letter-spacing: 8px; }
-  .jackpot-counter { font-size: 2.2rem; }
-  .jackpot-box { max-width: 480px; padding: 32px 28px 22px; }
-  .hero-mascot-wrap { width: 280px; }
+  .jackpot-box { max-width: 480px; padding: 28px 26px 22px; }
+  .hero-mascot-wrap--prx7 {
+    width: min(340px, 52vw);
+    max-height: min(52vh, 400px);
+  }
+  .hero-mascot-wrap--prx7 .hero-mascot { max-height: min(52vh, 400px); }
   .game-thumb { width: 135px; }
   .golden-ribbon { margin-left: auto; margin-right: auto; max-width: 480px; }
   .promo-divider { max-width: 480px; }
   .win-showcase { max-width: 520px; }
+  .bonus-pill { font-size: 1.28rem; padding: 12px 34px; }
   .btn-dl { padding: 18px 60px; font-size: 1.2rem; }
+  .cta-wrap--hero .btn-dl { padding: 16px 44px; font-size: 1.12rem; max-width: 400px; }
 }
 
 @media (min-width: 1024px) {
   .top-nav { max-width: 680px; margin: 0 auto; }
   .hero { max-width: 680px; margin: 0 auto; }
-  .jackpot-title { font-size: 4.2rem; }
-  .jackpot-box { max-width: 560px; }
-  .hero-mascot-wrap { width: 320px; }
+  .jackpot-box { max-width: 560px; padding: 30px 28px 24px; }
+  .hero-mascot-wrap--prx7 {
+    width: min(400px, 42vw);
+    max-height: min(54vh, 460px);
+  }
+  .hero-mascot-wrap--prx7 .hero-mascot { max-height: min(54vh, 460px); }
+  .cta-wrap--hero .btn-dl { padding: 18px 52px; font-size: 1.2rem; max-width: 440px; }
   .games-carousel { max-width: 680px; margin: 0 auto; }
   .game-thumb { width: 150px; }
   .golden-ribbon { max-width: 560px; }
   .promo-divider { max-width: 560px; }
   .win-showcase { max-width: 600px; }
+  .bonus-pill { font-size: 1.4rem; padding: 14px 38px; }
   .page-footer-text { max-width: 600px; margin: 0 auto; }
 }

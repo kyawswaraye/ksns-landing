@@ -17,21 +17,6 @@ function trackDL() {
 })();
 
 (function () {
-  var el = document.getElementById('jackpot-display');
-  if (!el) return;
-  var amount = 120016888;
-
-  function fmt(n) {
-    return n.toLocaleString('en-US');
-  }
-
-  setInterval(function () {
-    amount += Math.floor(Math.random() * 88) + 3;
-    el.textContent = fmt(amount);
-  }, 2500);
-})();
-
-(function () {
   var items = document.querySelectorAll('.game-thumb, .win-card');
   if (!('IntersectionObserver' in window)) {
     items.forEach(function (el) { el.classList.add('visible'); });
